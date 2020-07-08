@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.73.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>How to actually list ALL CDS records in Flow&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to actually list ALL CDS records in Flow" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
+<script async src="//static.getclicky.com/js"></script>
+<body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Power Platform Blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">Navigating through the Power Platform</span></div></section>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to actually list ALL CDS records in Flow</h1><p class="article date">2020-04-18</p></section><article class="article markdown-body"><p>The <em>List records</em> action in the <em>Common Data Service (current)</em> connector can be used to retrieve records from an entity in the CDS. Technically, this action returns an <em>EntityItemList</em> body, which is an array of individual <em>EntityItems</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>If you use this action in your Flow without further configuration, only 512 <em>EntityItems</em> will be returned by default.
+In other words, whatever operation you had in mind for your Flow for the records listed, that operation will be applied to a maximum of 512 records.</p>
+<p>This limit will work for many scenarios, but what if you want to bulk update a lot of records?
+Luckily, the <em>List records</em> action supports pagination by default.
+This limit can be configured up to a maximum of 100,000 in the action settings<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<span class="image-container"><span class="link" ><a href="/images/listrecordspagination.PNG" 
+        target="_blank"><img class="img" src="/images/listrecordspagination.PNG" 
+         alt="List records pagination settings"/></a></span><span class="caption">
+            <span class="title">List records pagination settings</span class="image-container-caption">
+        </span>
+</span>
+<p>But what if even 100,000 records are not enough?
+An example scenario could be that you introduced new metadata in your data model and want to update all existing records in your CDS.</p>
+<p>So, how to actually list <strong>ALL</strong> CDS records?</p>
+<ol>
+<li>
+<p>Initiliaze a boolean variable and give it a name, for example <code>Continue</code>.
+<span class="image-container"><span class="link" ><a href="/images/initializevariable.PNG" 
+        target="_blank"><img class="img" src="/images/initializevariable.PNG" 
+         alt="Initialize variable Continue"/></a></span><span class="caption">
+            <span class="title">Initialize variable Continue</span class="image-container-caption">
+        </span>
+</span></p>
+</li>
+<li>
+<p>Add a <em>Do until</em> control, which contains the remainder of the actions.
+<span class="image-container"><span class="link" ><a href="/images/untilcontrol.PNG" 
+        target="_blank"><img class="img" src="/images/untilcontrol.PNG" 
+         alt="Do until control"/></a></span><span class="caption">
+            <span class="title">Do until control</span class="image-container-caption">
+        </span>
+</span></p>
+</li>
+<li>
+<p>In the condition, check if <em>List records</em> is still returning items by using an expression <code>int(length(body('List_records')?['value']))</code>
+<span class="image-container"><span class="link" ><a href="/images/condition.PNG" 
+        target="_blank"><img class="img" src="/images/condition.PNG" 
+         alt="Condition to check if list still returns items"/></a></span><span class="caption">
+            <span class="title">Condition to check if list still returns items</span class="image-container-caption">
+        </span>
+</span></p>
+</li>
+<li>
+<p>If true, continue with the rest of your flow to update existing records. If false, however, set the <code>Continue</code> variable to <code>false</code> to exit the <em>Do until</em> control.
+<span class="image-container"><span class="link" ><a href="/images/setvariable.PNG" 
+        target="_blank"><img class="img" src="/images/setvariable.PNG" 
+         alt="Set Continue variable to false"/></a></span><span class="caption">
+            <span class="title">Set Continue variable to false</span class="image-container-caption">
+        </span>
+</span></p>
+</li>
+</ol>
+<p>This Flow does not stop at 100,000 records, but should retrieve all records based on your <em>List records</em> action.</p>
+<h1 id="more-information">More information</h1>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>List records action: <a href="https://docs.microsoft.com/en-us/connectors/commondataserviceforapps/#list-records">https://docs.microsoft.com/en-us/connectors/commondataserviceforapps/#list-records</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>LogicApps pagination: <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-exceed-default-page-size-with-pagination%5D">https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-exceed-default-page-size-with-pagination]</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+</article><section class="article labels"><a class="category" href=/categories/common-data-service/>Common Data Service</a><a class="category" href=/categories/flow/>Flow</a></section></div><section class="article navigation"><p><a class="link" href="/posts/a-quicker-method-to-map-different-option-set-values-in-flow/"><span class="li">&larr;</span>A quicker method to map different option set values in Flow</a></p><p><a class="link" href="/posts/troubleshooting-the-uci-ribbon/"><span class="li">&rarr;</span>Troubleshooting the ribbon - UCI style</a></p></section><section class="article discussion">
+	<script defer src="https://cdn.commento.io/js/commento.js"></script>
+	<div id="commento"></div>
+</section>
+</div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">Power Platform Blog</p>
+</div>
+</section></div>
+</body>
+
+</html>

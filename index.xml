@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Power Platform Blog</title>
+    <link>/</link>
+    <description>Recent content on Power Platform Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2020 12:01:44 +0200</lastBuildDate>
+    
+        <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Posts</title>
+      <link>/posts/</link>
+      <pubDate>Fri, 01 May 2020 12:01:44 +0200</pubDate>
+      
+      <guid>/posts/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Thu, 02 Apr 2020 14:26:30 +0200</pubDate>
+      
+      <guid>/about/</guid>
+      <description>As a lead consultant at a Microsoft Gold Partner I regularly encounter challenges within the Power Platform domain. The Power Platform and its capabilities evolve rapidly, and the knowledge required to utilize the latest functionality keeps growing.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

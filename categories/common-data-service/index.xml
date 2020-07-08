@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Common Data Service on Power Platform Blog</title>
+    <link>/categories/common-data-service/</link>
+    <description>Recent content in Common Data Service on Power Platform Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 01 May 2020 12:01:44 +0200</lastBuildDate>
+    
+        <atom:link href="/categories/common-data-service/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A quicker method to map different option set values in Flow</title>
+      <link>/posts/a-quicker-method-to-map-different-option-set-values-in-flow/</link>
+      <pubDate>Fri, 01 May 2020 12:01:44 +0200</pubDate>
+      
+      <guid>/posts/a-quicker-method-to-map-different-option-set-values-in-flow/</guid>
+      <description>If you want to map input from one CDS option set to another with the same values in Flow, all you have to do is map the corresponding field - easy.</description>
+      
+    </item>
+    
+    <item>
+      <title>How to actually list ALL CDS records in Flow</title>
+      <link>/posts/how-to-actually-list-all-cds-records-in-flow/</link>
+      <pubDate>Sat, 18 Apr 2020 12:01:44 +0200</pubDate>
+      
+      <guid>/posts/how-to-actually-list-all-cds-records-in-flow/</guid>
+      <description>The List records action in the Common Data Service (current) connector can be used to retrieve records from an entity in the CDS. Technically, this action returns an EntityItemList body, which is an array of individual EntityItems1.</description>
+      
+    </item>
+    
+    <item>
+      <title>Using the right Common Data Service Connector in Flow</title>
+      <link>/posts/using-the-right-common-data-service-connector-in-flow/</link>
+      <pubDate>Thu, 02 Apr 2020 12:01:26 +0200</pubDate>
+      
+      <guid>/posts/using-the-right-common-data-service-connector-in-flow/</guid>
+      <description>Microsoft Flow opens up new possibilities for low-code development with the Common Data Service. By default, when creating a new Flow, the Common Data Service connector catches the eye immediately.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
