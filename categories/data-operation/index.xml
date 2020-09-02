@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data Operation on Power Platform Blog</title>
+    <link>/categories/data-operation/</link>
+    <description>Recent content in Data Operation on Power Platform Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 02 Sep 2020 11:43:37 +0200</lastBuildDate>
+    
+        <atom:link href="/categories/data-operation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to use filter array data operation</title>
+      <link>/posts/how-to-use-filter-arrays/</link>
+      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
+      
+      <guid>/posts/how-to-use-filter-arrays/</guid>
+      <description>The Common Data Service connectors provides two actions to retrieve data from other entities: Get a record, and List records. The Get a record action is straightforward: provide the entity name and the GUID of the record you want to retrieve.</description>
+      
+    </item>
+    
+  </channel>
+</rss>

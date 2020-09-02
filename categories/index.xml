@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2020 09:00:53 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 11:43:37 +0200</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Common Data Service</title>
       <link>/categories/common-data-service/</link>
-      <pubDate>Sun, 12 Jul 2020 09:00:53 +0200</pubDate>
+      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
       
       <guid>/categories/common-data-service/</guid>
       <description></description>
@@ -22,9 +22,19 @@
     </item>
     
     <item>
+      <title>Data Operation</title>
+      <link>/categories/data-operation/</link>
+      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
+      
+      <guid>/categories/data-operation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Flow</title>
       <link>/categories/flow/</link>
-      <pubDate>Sun, 12 Jul 2020 09:00:53 +0200</pubDate>
+      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
       
       <guid>/categories/flow/</guid>
       <description></description>

@@ -6,10 +6,20 @@
     <description>Recent content in Common Data Service on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 Jul 2020 09:00:53 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 11:43:37 +0200</lastBuildDate>
     
         <atom:link href="/categories/common-data-service/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to use filter array data operation</title>
+      <link>/posts/how-to-use-filter-arrays/</link>
+      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
+      
+      <guid>/posts/how-to-use-filter-arrays/</guid>
+      <description>The Common Data Service connectors provides two actions to retrieve data from other entities: Get a record, and List records. The Get a record action is straightforward: provide the entity name and the GUID of the record you want to retrieve.</description>
+      
+    </item>
     
     <item>
       <title>Sending Emails with Flow</title>
