@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2020 11:43:37 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 04 Feb 2021 08:58:37 +0100</lastBuildDate>
     
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sort Sales Pipeline by Label</title>
+      <link>/posts/sort-sales-pipeline-by-label/</link>
+      <pubDate>Thu, 04 Feb 2021 08:58:37 +0100</pubDate>
+      
+      <guid>/posts/sort-sales-pipeline-by-label/</guid>
+      <description>If you use the sales pipeline chart in combination with an option set for your visualization, by default the chart is ordered by the option set value. But what if you want to order by the labels of the option set instead?</description>
+      
+    </item>
     
     <item>
       <title>How to use filter array data operation</title>

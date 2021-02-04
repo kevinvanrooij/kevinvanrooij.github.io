@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>Sort Sales Pipeline by Label&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Sort Sales Pipeline by Label" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
+<script async src="//static.getclicky.com/js"></script>
+<body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Power Platform Blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">Navigating through the Power Platform</span></div></section>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">Sort Sales Pipeline by Label</h1><p class="article date">2021-02-04</p></section><article class="article markdown-body"><p>If you use the sales pipeline chart in combination with an option set for your visualization, by default the chart is ordered by the option set value.
+But what if you want to order by the labels of the option set instead?</p>
+<p>Let&rsquo;s take the following option set as an example:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Start</td>
+<td>274000001</td>
+</tr>
+<tr>
+<td>2 Examine</td>
+<td>274000002</td>
+</tr>
+<tr>
+<td>3 Continue</td>
+<td>274000004</td>
+</tr>
+<tr>
+<td>4 Finish</td>
+<td>274000003</td>
+</tr>
+</tbody>
+</table>
+<p>The result would be:</p>
+<span class="image-container"><span class="link" ><a href="/images/pipeline-wrong-order.PNG" 
+        target="_blank"><img class="img" src="/images/pipeline-wrong-order.PNG" 
+         alt="Sales pipeline wrong order"/></a></span><span class="caption">
+            <span class="title">Sales pipeline ordered by values</span class="image-container-caption">
+        </span>
+</span>
+<p>Fortunately, this is quite easy to correct:</p>
+<ol>
+<li>Create a new unmanaged solution and add the sales pipeline chart;</li>
+<li>Export the solution;</li>
+<li>Extract the zip package;</li>
+<li>Modify the customizations.xml;</li>
+<li>Package the files;</li>
+<li>Import the unmanaged solution.</li>
+</ol>
+<p>Step #4 is the key here: a small modification to the customizations.xml is necessary. The relevant part of the XML is the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">count=</span><span style="color:#e6db74">&#34;10&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;entity</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunity&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunityrevenue&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;sum&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;sum_estimatedvalue&#34;</span> <span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;my_option_set&#34;</span> <span style="color:#a6e22e">groupby=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;stepname&#34;</span> <span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;order</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;stepname&#34;</span> <span style="color:#a6e22e">ascending=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/entity&gt;</span>
+<span style="color:#f92672">&lt;/fetch&gt;</span></code></pre></div>
+<p>Remove the count attribute from the fetch tag, and the entire order tag. The modified XML now looks like this snippet:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+	<span style="color:#f92672">&lt;entity</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunity&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunityrevenue&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;sum&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;sum_estimatedvalue&#34;</span> <span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;my_option_set&#34;</span> <span style="color:#a6e22e">groupby=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;stepname&#34;</span> <span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/entity&gt;</span>
+<span style="color:#f92672">&lt;/fetch&gt;</span></code></pre></div>
+<p>After re-importing the solution, your chart should now correctly order by label:</p>
+<span class="image-container"><span class="link" ><a href="/images/pipeline-correct-order.PNG" 
+        target="_blank"><img class="img" src="/images/pipeline-correct-order.PNG" 
+         alt="Sales pipeline ordered by label"/></a></span><span class="caption">
+            <span class="title">Sales pipeline ordered by label</span class="image-container-caption">
+        </span>
+</span>
+</article><section class="article labels"><a class="category" href=/categories/visualization/>Visualization</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-use-filter-arrays/"><span class="li">&rarr;</span>How to use filter array data operation</a></p></section><section class="article discussion">
+	<script defer src="https://cdn.commento.io/js/commento.js"></script>
+	<div id="commento"></div>
+</section>
+</div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">Power Platform Blog</p>
+</div>
+</section></div>
+</body>
+
+</html>
