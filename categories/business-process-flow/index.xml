@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Visualization on Power Platform Blog</title>
-    <link>/categories/visualization/</link>
-    <description>Recent content in Visualization on Power Platform Blog</description>
+    <title>Business Process Flow on Power Platform Blog</title>
+    <link>/categories/business-process-flow/</link>
+    <description>Recent content in Business Process Flow on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 23 Apr 2021 13:44:44 +0200</lastBuildDate>
     
-        <atom:link href="/categories/visualization/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="/categories/business-process-flow/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/</guid>
       <description>In the previous post I talked about sorting a pipeline chart by option set labels instead of its values if you use a option set for ordering your pipeline. However, the default sales pipeline order by the field &amp;lsquo;Pipeline Phase&amp;rsquo; - which is a text field.</description>
-      
-    </item>
-    
-    <item>
-      <title>Sort sales pipeline by option set labels</title>
-      <link>/posts/sort-sales-pipeline-by-option-set-labels/</link>
-      <pubDate>Thu, 04 Feb 2021 08:58:37 +0100</pubDate>
-      
-      <guid>/posts/sort-sales-pipeline-by-option-set-labels/</guid>
-      <description>If you use the sales pipeline chart in combination with an option set for your visualization, by default the chart is ordered by the option set value. But what if you want to order by the labels of the option set instead?</description>
       
     </item>
     

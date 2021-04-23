@@ -6,15 +6,35 @@
     <description>Recent content in Categories on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Feb 2021 08:58:37 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 23 Apr 2021 13:44:44 +0200</lastBuildDate>
     
         <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Business Process Flow</title>
+      <link>/categories/business-process-flow/</link>
+      <pubDate>Fri, 23 Apr 2021 13:44:44 +0200</pubDate>
+      
+      <guid>/categories/business-process-flow/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Flow</title>
+      <link>/categories/flow/</link>
+      <pubDate>Fri, 23 Apr 2021 13:44:44 +0200</pubDate>
+      
+      <guid>/categories/flow/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Visualization</title>
       <link>/categories/visualization/</link>
-      <pubDate>Thu, 04 Feb 2021 08:58:37 +0100</pubDate>
+      <pubDate>Fri, 23 Apr 2021 13:44:44 +0200</pubDate>
       
       <guid>/categories/visualization/</guid>
       <description></description>
@@ -37,16 +57,6 @@
       <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
       
       <guid>/categories/data-operation/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Flow</title>
-      <link>/categories/flow/</link>
-      <pubDate>Wed, 02 Sep 2020 11:43:37 +0200</pubDate>
-      
-      <guid>/categories/flow/</guid>
       <description></description>
       
     </item>
