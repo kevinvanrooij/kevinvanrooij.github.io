@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>/categories/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
+    <loc>/categories/flow/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
+    <loc>/posts/how-to-resolve-a-case-using-flow/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
+    <loc>/posts/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
+    <loc>/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
+    <loc>/categories/unbound-actions/</loc><lastmod>2021-05-29T11:15:44+02:00</lastmod></url><url>
     <loc>/categories/business-process-flow/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
-    <loc>/categories/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
-    <loc>/categories/flow/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
     <loc>/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
-    <loc>/posts/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
-    <loc>/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
     <loc>/categories/visualization/</loc><lastmod>2021-04-23T13:44:44+02:00</lastmod></url><url>
     <loc>/posts/sort-sales-pipeline-by-option-set-labels/</loc><lastmod>2021-02-04T08:58:37+01:00</lastmod></url><url>
     <loc>/categories/common-data-service/</loc><lastmod>2020-09-02T11:43:37+02:00</lastmod></url><url>

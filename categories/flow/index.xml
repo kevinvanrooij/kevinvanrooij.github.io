@@ -6,10 +6,20 @@
     <description>Recent content in Flow on Power Platform Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Apr 2021 13:44:44 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 29 May 2021 11:15:44 +0200</lastBuildDate>
     
         <atom:link href="/categories/flow/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to resolve a case using Flow</title>
+      <link>/posts/how-to-resolve-a-case-using-flow/</link>
+      <pubDate>Sat, 29 May 2021 11:15:44 +0200</pubDate>
+      
+      <guid>/posts/how-to-resolve-a-case-using-flow/</guid>
+      <description>In a classic workflow it is quite easy to resolve a case, because we can just update the status as a step in the workflow. To my surprise, when I tried to use the same logic in Flow by updating the Status and Status Reason fields, this didn&amp;rsquo;t work.</description>
+      
+    </item>
     
     <item>
       <title>How to fix your sales pipeline after reordering business process flow stages </title>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Unbound actions on Power Platform Blog</title>
+    <link>/categories/unbound-actions/</link>
+    <description>Recent content in Unbound actions on Power Platform Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 May 2021 11:15:44 +0200</lastBuildDate>
+    
+        <atom:link href="/categories/unbound-actions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to resolve a case using Flow</title>
+      <link>/posts/how-to-resolve-a-case-using-flow/</link>
+      <pubDate>Sat, 29 May 2021 11:15:44 +0200</pubDate>
+      
+      <guid>/posts/how-to-resolve-a-case-using-flow/</guid>
+      <description>In a classic workflow it is quite easy to resolve a case, because we can just update the status as a step in the workflow. To my surprise, when I tried to use the same logic in Flow by updating the Status and Status Reason fields, this didn&amp;rsquo;t work.</description>
+      
+    </item>
+    
+    <item>
+      <title>Sending Emails with Flow</title>
+      <link>/posts/sending-emails-with-flow/</link>
+      <pubDate>Sun, 12 Jul 2020 09:00:53 +0200</pubDate>
+      
+      <guid>/posts/sending-emails-with-flow/</guid>
+      <description>A common steps to use in a Dynamics CRM workflow is Send email. This is pretty straightforward: in this single step you can define the sender, recipient(s), body and all other available fields of the email entity.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
