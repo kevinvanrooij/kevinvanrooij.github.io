@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark"><title>How to trigger a Flow based on the regarding object&#39;s type&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="How to trigger a Flow based on the regarding object&#39;s type" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
+<script async src="//static.getclicky.com/js"></script>
+<body>
+    <div class="base-body"><section id="header" class="site header">
+    <div class="header wrap"><span class="header left-side"><a class="site home" href="/"><span class="site name">Power Platform Blog</span></a></span>
+        <span class="header right-side"><div class="nav wrap"><nav class="nav"><a class="nav item" href="/categories/">Categories</a><a class="nav item" href="/about">About</a></nav></div></span></div><div class="site slogan"><span class="title">Navigating through the Power Platform</span></div></section>
+<div id="content"><div class="article-container"><section class="article header">
+    <h1 class="article title">How to trigger a Flow based on the regarding object's type</h1><p class="article date">2021-06-03</p></section><article class="article markdown-body"><p>A quick post today about an annoyance I found while implementing a Flow for a customer.</p>
+<p>One of my customers&rsquo; requirements was that a Flow should be only started when a phone call is created on the Timeline of leads. For other entities, this Flow shouldn&rsquo;t even be started.</p>
+<p>Easy, right? Just add a row filter to check if field <em>regardingobjectid_type</em> equals &lsquo;leads&rsquo;. Wrong!
+To my surprise, while the Flow execution history shows that <em>regardingobjectid_type</em> contains the value &lsquo;leads&rsquo;, the row filter does not work.</p>
+<p>So, what&rsquo;s the solution? Add a trigger condition: <code>@equals(triggerBody()?['_regardingobjectid_type'],'leads')</code></p>
+<span class="image-container"><span class="link" ><a href="/images/trigger-condition-regardingobjecttype.PNG" 
+        target="_blank"><img class="img" src="/images/trigger-condition-regardingobjecttype.PNG" 
+         alt="Trigger condition to only run Flow based on regardingobjecttype"/></a></span><span class="caption">
+            <span class="title">Trigger condition to only run Flow based on regardingobjecttype</span class="image-container-caption">
+        </span>
+</span>
+</article><section class="article labels"><a class="category" href=/categories/flow/>Flow</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-resolve-a-case-using-flow/"><span class="li">&rarr;</span>How to resolve a case using Flow</a></p></section><section class="article discussion">
+	<script defer src="https://cdn.commento.io/js/commento.js"></script>
+	<div id="commento"></div>
+</section>
+</div><section id="footer" class="footer"><div class="footer-wrap">
+    <p class="copyright">Power Platform Blog</p>
+</div>
+</section></div>
+</body>
+
+</html>
