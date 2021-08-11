@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>How to resolve a case using Flow&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="supported-color-schemes" content="light dark"><title>How to resolve a case using Flow&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.446e2aa9ead6a65cab542d173d2ad4b48aa593e5ba918d404c74d2a4583b75e93f6b639a9f8765c24c3f1e259b284f43.css" integrity="sha384-RG4qqerWplyrVC0XPSrUtIqlk&#43;W6kY1ATHTSpFg7dek/a2Oan4dlwkw/HiWbKE9D"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="How to resolve a case using Flow" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
 <script async src="//static.getclicky.com/js"></script>
 <body>
@@ -22,7 +22,7 @@ My first attempt looked liked this:</p>
 <p>Which resulted in the following error: <code>CRM do not support direct update of Entity Reference properties, Use Navigation properties instead.</code></p>
 <p>Luckily, a workaround was found by Microsoft MVP Linn Zaw Win<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> to make the CloseIncident unbound action work.
 Instead of selecting the <em>CloseIncident</em> action, use a custom value <code>trim('CloseIncident')</code> and construct your own JSON action parameters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;IncidentResolution&#34;</span>: {
     <span style="color:#f92672">&#34;subject&#34;</span>: <span style="color:#e6db74">&#34;Case Resolution&#34;</span>,
     <span style="color:#f92672">&#34;resolutiontypecode&#34;</span>: <span style="color:#ae81ff">5</span>,
@@ -44,15 +44,11 @@ Until then, thanks Linn!</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>Blog post by Linn Zaw Win: <a href="https://community.dynamics.com/365/b/linn-s-power-platform-notebook/posts/perform-bound-unbound-action-with-entitytype-parameters-in-power-automate">https://community.dynamics.com/365/b/linn-s-power-platform-notebook/posts/perform-bound-unbound-action-with-entitytype-parameters-in-power-automate</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Blog post by Linn Zaw Win: <a href="https://community.dynamics.com/365/b/linn-s-power-platform-notebook/posts/perform-bound-unbound-action-with-entitytype-parameters-in-power-automate"target="_blank">https://community.dynamics.com/365/b/linn-s-power-platform-notebook/posts/perform-bound-unbound-action-with-entitytype-parameters-in-power-automate</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
-</article><section class="article labels"><a class="category" href=/categories/flow/>Flow</a><a class="category" href=/categories/unbound-actions/>Unbound actions</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-trigger-a-flow-based-on-the-regarding-objects-type/"><span class="li">&larr;</span>How to trigger a Flow based on the regarding object's type</a></p><p><a class="link" href="/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/"><span class="li">&rarr;</span>How to fix your sales pipeline after reordering business process flow stages </a></p></section><section class="article discussion">
-	<script defer src="https://cdn.commento.io/js/commento.js"></script>
-	<div id="commento"></div>
-</section>
-</div><section id="footer" class="footer"><div class="footer-wrap">
+</article><section class="article labels"><a class="category" href=/categories/flow/>Flow</a><a class="category" href=/categories/unbound-actions/>Unbound actions</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-trigger-a-flow-based-on-the-regarding-objects-type/"><span class="li">&larr;</span>How to trigger a Flow based on the regarding object's type</a></p><p><a class="link" href="/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/"><span class="li">&rarr;</span>How to fix your sales pipeline after reordering business process flow stages </a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">Power Platform Blog</p>
 </div>
 </section></div>

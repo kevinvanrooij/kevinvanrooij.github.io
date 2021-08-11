@@ -18,7 +18,7 @@
       
       <guid>/posts/how-to-trigger-a-flow-based-on-the-regarding-objects-type/</guid>
       <description>A quick post today about an annoyance I found while implementing a Flow for a customer.
-One of my customers&amp;rsquo; requirements was that a Flow should be only started when a phone call is created on the Timeline of leads.</description>
+One of my customers&#39; requirements was that a Flow should be only started when a phone call is created on the Timeline of leads.</description>
       
     </item>
     

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Sort sales pipeline by option set labels&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="supported-color-schemes" content="light dark"><title>Sort sales pipeline by option set labels&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.446e2aa9ead6a65cab542d173d2ad4b48aa593e5ba918d404c74d2a4583b75e93f6b639a9f8765c24c3f1e259b284f43.css" integrity="sha384-RG4qqerWplyrVC0XPSrUtIqlk&#43;W6kY1ATHTSpFg7dek/a2Oan4dlwkw/HiWbKE9D"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Sort sales pipeline by option set labels" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
 <script async src="//static.getclicky.com/js"></script>
 <body>
@@ -55,7 +55,7 @@ But what if you want to order by the labels of the option set instead?</p>
 <li>Import the unmanaged solution.</li>
 </ol>
 <p>Step #4 is the key here: a small modification to the customizations.xml is necessary. The relevant part of the XML is the following:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">count=</span><span style="color:#e6db74">&#34;10&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">count=</span><span style="color:#e6db74">&#34;10&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
 	<span style="color:#f92672">&lt;entity</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunity&#34;</span><span style="color:#f92672">&gt;</span>
 		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunityrevenue&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;sum&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;sum_estimatedvalue&#34;</span> <span style="color:#f92672">/&gt;</span>
 		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;my_option_set&#34;</span> <span style="color:#a6e22e">groupby=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;stepname&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -63,7 +63,7 @@ But what if you want to order by the labels of the option set instead?</p>
 	<span style="color:#f92672">&lt;/entity&gt;</span>
 <span style="color:#f92672">&lt;/fetch&gt;</span></code></pre></div>
 <p>Remove the count attribute from the fetch tag, and the entire order tag. The modified XML now looks like this snippet:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;fetch</span> <span style="color:#a6e22e">mapping=</span><span style="color:#e6db74">&#34;logical&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
 	<span style="color:#f92672">&lt;entity</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunity&#34;</span><span style="color:#f92672">&gt;</span>
 		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;opportunityrevenue&#34;</span> <span style="color:#a6e22e">aggregate=</span><span style="color:#e6db74">&#34;sum&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;sum_estimatedvalue&#34;</span> <span style="color:#f92672">/&gt;</span>
 		<span style="color:#f92672">&lt;attribute</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;my_option_set&#34;</span> <span style="color:#a6e22e">groupby=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">alias=</span><span style="color:#e6db74">&#34;stepname&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -76,11 +76,7 @@ But what if you want to order by the labels of the option set instead?</p>
             <span class="title">Sales pipeline ordered by label</span class="image-container-caption">
         </span>
 </span>
-</article><section class="article labels"><a class="category" href=/categories/visualization/>Visualization</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/"><span class="li">&larr;</span>How to fix your sales pipeline after reordering business process flow stages </a></p><p><a class="link" href="/posts/how-to-use-filter-arrays/"><span class="li">&rarr;</span>How to use filter array data operation</a></p></section><section class="article discussion">
-	<script defer src="https://cdn.commento.io/js/commento.js"></script>
-	<div id="commento"></div>
-</section>
-</div><section id="footer" class="footer"><div class="footer-wrap">
+</article><section class="article labels"><a class="category" href=/categories/visualization/>Visualization</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-fix-your-sales-pipeline-after-reordering-business-process-flow-stages/"><span class="li">&larr;</span>How to fix your sales pipeline after reordering business process flow stages </a></p><p><a class="link" href="/posts/how-to-use-filter-arrays/"><span class="li">&rarr;</span>How to use filter array data operation</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">Power Platform Blog</p>
 </div>
 </section></div>

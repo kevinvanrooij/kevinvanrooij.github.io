@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<html lang="en"><meta charset="utf-8"><meta name="generator" content="Hugo 0.87.0" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark"><title>Sending Emails with Flow&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.02250ecb73c2a525093068970f348a12ebf43773fedba0030f60869c352a10b239940d2b3a44fda957e7037a8a6cef4d.css" integrity="sha384-AiUOy3PCpSUJMGiXDzSKEuv0N3P&#43;26ADD2CGnDUqELI5lA0rOkT9qVfnA3qKbO9N"><meta name="twitter:card" content="summary" />
+<meta name="supported-color-schemes" content="light dark"><title>Sending Emails with Flow&nbsp;&ndash;&nbsp;Power Platform Blog</title><link rel="stylesheet" href="/css/core.min.446e2aa9ead6a65cab542d173d2ad4b48aa593e5ba918d404c74d2a4583b75e93f6b639a9f8765c24c3f1e259b284f43.css" integrity="sha384-RG4qqerWplyrVC0XPSrUtIqlk&#43;W6kY1ATHTSpFg7dek/a2Oan4dlwkw/HiWbKE9D"><meta name="twitter:card" content="summary" />
 <meta name="twitter:title" content="Sending Emails with Flow" /><script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101246749);</script>
 <script async src="//static.getclicky.com/js"></script>
 <body>
@@ -53,7 +53,7 @@
         </span>
 </span>
 <p>One thing to keep in mind is that you might need to use <code>decodeUriComponent('%40')</code> to display the @ symbol. The formula used to set the sender object is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;participationtypemask&#34;</span>: <span style="color:#ae81ff">1</span>,
   <span style="color:#f92672">&#34;partyid_systemuser@{decodeUriComponent(&#39;%40&#39;)}odata.bind&#34;</span>: <span style="color:#e6db74">&#34;/systemusers(UserID)&#34;</span>
 
@@ -77,7 +77,7 @@
         </span>
 </span>
 <p>The formula is:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;email_activity_parties&#34;</span>: <span style="color:#960050;background-color:#1e0010">@</span>{<span style="color:#960050;background-color:#1e0010">variables(&#39;activityparties&#39;)</span>},
   <span style="color:#f92672">&#34;@{decodeUriComponent(&#39;%40&#39;)}odata.type&#34;</span>: <span style="color:#960050;background-color:#1e0010">&#34;Microsoft.Dynamics.CRM.email</span>
 }</code></pre></div>
@@ -94,15 +94,11 @@
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>Activity party types: <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/activityparty-entity">https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/activityparty-entity</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Activity party types: <a href="https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/activityparty-entity"target="_blank">https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/activityparty-entity</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
-</article><section class="article labels"><a class="category" href=/categories/common-data-service/>Common Data Service</a><a class="category" href=/categories/flow/>Flow</a><a class="category" href=/categories/unbound-actions/>Unbound actions</a><a class="category" href=/categories/dataverse/>Dataverse</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-use-filter-arrays/"><span class="li">&larr;</span>How to use filter array data operation</a></p><p><a class="link" href="/posts/a-quicker-method-to-map-different-option-set-values-in-flow/"><span class="li">&rarr;</span>A quicker method to map different option set values in Flow</a></p></section><section class="article discussion">
-	<script defer src="https://cdn.commento.io/js/commento.js"></script>
-	<div id="commento"></div>
-</section>
-</div><section id="footer" class="footer"><div class="footer-wrap">
+</article><section class="article labels"><a class="category" href=/categories/common-data-service/>Common Data Service</a><a class="category" href=/categories/flow/>Flow</a><a class="category" href=/categories/unbound-actions/>Unbound actions</a><a class="category" href=/categories/dataverse/>Dataverse</a></section></div><section class="article navigation"><p><a class="link" href="/posts/how-to-use-filter-arrays/"><span class="li">&larr;</span>How to use filter array data operation</a></p><p><a class="link" href="/posts/a-quicker-method-to-map-different-option-set-values-in-flow/"><span class="li">&rarr;</span>A quicker method to map different option set values in Flow</a></p></section></div><section id="footer" class="footer"><div class="footer-wrap">
     <p class="copyright">Power Platform Blog</p>
 </div>
 </section></div>
